@@ -14,11 +14,55 @@
       name="description"
       content="Control Finance - Seu controle financeiro"
     />
+    <link rel="stylesheet" href="./src/styles/reset.css">
     <link rel="stylesheet" href="./src/styles/globalStyles.css" />
     <link rel="stylesheet" href="./src/styles/index.css" />
   </head>
   <body>
-    <main id="app"></main>
+    <header class="header__container"> 
+      <h1 class="header__title"><span class="header__span">Controle</span> Finceiro </h1>
+      <button class="header__button">Registrar Novo Valor</button>
+    </header>
+    <nav class="nav__container">
+      <h2 class="nav__title">Resumo Financeiro</h2>
+      <div class="nav-div__container">
+        <button class="nav-div__button">Todos</button>
+        <button class="nav-div__button">Estradas</button>
+        <button class="nav-div__button">Saidas</button>
+      </div>
+    </nav>
+    <main id="app">
+      <section class="section__container">
+        <p class="section__text">Soma valores</p>
+        <p class="section__text">R$ <span>20,00</span></p>
+      </section>
+      <section class="section__container-itens">
+        <ul class="section-list__container">
+          <li class="list-item__container">
+            <p class="item__text">R$ <span class="item__span">20,00</span></p>
+            <div class="item-div__container">
+              <button class="item__button">Entrada</button>
+              <img class="item__image" src="./src/assets/trash.svg" alt="trash">
+            </div>
+          </li>
+        </ul>
+      </section>
+      <dialog class="dialog__controller" open>
+        <div class="dialog__container">
+          <header class="header-dialog__container">
+            <h1 class="header-dialog__title">Registro de valor</h1>
+            <button class="header-dialog__button">X</button>
+          </header>
+          <section class="section-dialog__container">
+            <p class="section-dialog__text">Digite o valor e em seguida aperte no botão referente ao tipo do valor</p>
+            <div class="div-dialog__container">
+              <label class="section-dialog__label">valor</label>
+              <input type="text" class="section-dialog__input" placeholder="00,00">
+            </div>
+          </section>
+        </div>
+      </dialog>
+    </main>
     <script src="./src/scripts/modal.js"></script>
     <script src="./src/scripts/valuesData.js"></script>
     <script src="./src/scripts/index.js"></script>

@@ -50,6 +50,38 @@ body {
   margin: 0 auto;
 }
 
+.header__container{
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: var(--color-grey-5);
+  padding: 20px 16px;
+}
+
+.header__title{
+  font-weight: var(--font-weight-1);
+  font-size: var(--font-size-1);
+  color: var(--color-grey-1);
+}
+
+.header__span{
+  color: var(--color-brand-1);
+}
+
+.header__button{
+  height: 32px;
+  background-color: var(--color-brand-1);
+  color: var(--color-mode);
+  border-radius: 8px;
+  border: none;
+  font-weight: var(--font-weight-1);
+  font-size: var(--font-size-3);
+}
+
+.header__button:hover{
+  background-color: var(--color-brand-2);
+}
+
 @media (max-width: 700px) {
   .container {
     max-width: 43rem;
