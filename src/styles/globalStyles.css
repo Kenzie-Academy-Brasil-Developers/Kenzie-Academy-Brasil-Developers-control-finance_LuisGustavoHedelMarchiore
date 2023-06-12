@@ -88,3 +88,22 @@ body {
     margin: 0 1rem;
   }
 }
+
+@media ( min-width: 1024px) {
+    .header__container{
+      margin: 0 auto;
+      padding: 20px 195px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      justify-content: space-around;
+    }
+
+    .header__button{
+      padding: 7.5px 14px;
+    }
+}

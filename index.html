@@ -26,15 +26,15 @@
     <nav class="nav__container">
       <h2 class="nav__title">Resumo Financeiro</h2>
       <div class="nav-div__container">
-        <button class="nav-div__button">Todos</button>
-        <button class="nav-div__button">Estradas</button>
-        <button class="nav-div__button">Saidas</button>
+        <button class="nav-div__button" onclick="renderCards(insertedValues, 2)">Todos</button>
+        <button class="nav-div__button" onclick="renderCards(insertedValues, 0)">Estradas</button>
+        <button class="nav-div__button" onclick="renderCards(insertedValues, 1)">Saidas</button>
       </div>
     </nav>
     <main id="app">
       <section class="section__container">
         <p class="section__text">Soma valores</p>
-        <p class="section__text">R$ <span>20,00</span></p>
+        <p class="section__text">R$ <span class="section__span">00,00</span></p>
       </section>
       <section class="section__container-itens">
         <ul class="section-list__container">
@@ -47,7 +47,7 @@
           </li>
         </ul>
       </section>
-      <dialog class="dialog__controller" open>
+      <dialog class="dialog__controller">
         <div class="dialog__container">
           <header class="header-dialog__container">
             <h1 class="header-dialog__title">Registro de valor</h1>
@@ -58,6 +58,15 @@
             <div class="div-dialog__container">
               <label class="section-dialog__label">valor</label>
               <input type="text" class="section-dialog__input" placeholder="00,00">
+            </div>
+          </section>
+          <section class="section-dialog__container">
+            <p class="section-dialog__text-value">Tipo de valor</p>
+            <button class="section-dialog__button" value="1" onclick="selecionarTipoValor(this)">Entrada</button>
+            <button class="section-dialog__button" value="0" onclick="selecionarTipoValor(this)">Saída</button>
+            <div class="div-dialog__container-buttons">
+              <button class="div-dialog__button-cancel" onclick="clearModal()">Cancelar</button>
+              <button class="div-dialog__button-insert" onclick="addItem()">Inserir Valor</button>
             </div>
           </section>
         </div>

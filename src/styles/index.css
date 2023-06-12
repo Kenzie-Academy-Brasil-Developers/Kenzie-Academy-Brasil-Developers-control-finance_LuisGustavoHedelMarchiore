@@ -84,9 +84,19 @@ main{
     border: 1.5px solid var(--color-grey-5);
 }
 
+.item__image:hover{
+    content: url(../assets/trashHover.svg);
+}
+
 .dialog__controller{
     width: 343px;
-    padding: 29.5px 24px;
+  padding: 29.5px 24px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
 }
 
 .header-dialog__container{
@@ -94,6 +104,7 @@ main{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .header-dialog__title{
@@ -107,6 +118,13 @@ main{
     font-weight: var(--font-weight-1);
     font-size: var(--font-size-2);
     border: none;
+    background-color: var(--color-grey-5);
+    color: var(--color-grey-2);
+}
+
+.header-dialog__button:hover{
+    background-color: var(--color-grey-4);
+    color: var(--color-grey-1);
 }
 
 .section-dialog__container{
@@ -128,7 +146,7 @@ main{
     color: var(--color-grey-2);
 }
 
-.section-dialog__label{
+.section-dialog__label, .section-dialog__text-value{
     font-weight: var(--font-weight-2);
     font-size: var(--font-size-3);
 }
@@ -144,4 +162,73 @@ main{
     font-size: var(--font-size-3);
     color: var(--color-grey-2);
     padding: 11.5px 25px;
+}
+
+.section-dialog__button{
+    background-color: var(--fixed-white);
+    border: 1.5px solid var(--color-grey-5);
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-3);
+    color: var(--color-grey-2);
+    padding: 7.5px;
+    border-radius: 8px;
+}
+
+.active{
+    border: 1px solid black;
+}
+
+.div-dialog__container-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.div-dialog__button-cancel{
+    background-color: var(--color-grey-4);
+    border: 1.5px solid var(--color-grey-4);
+    border-radius: 8px;
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-3);
+    padding: 7px 39px;
+    color: var(--color-grey-2);
+}
+
+.div-dialog__button-cancel:hover{
+    background-color: var(--color-grey-5);
+    color: var(--color-grey-1);
+}
+
+.div-dialog__button-insert{
+    background-color: var(--color-brand-1);
+    border: 1.5px solid var(--color-brand-1);
+    border-radius: 8px;
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-3);
+    padding: 7px 39px;
+    color: var(--fixed-white);
+}
+
+.div-dialog__button-insert:hover{
+    background-color: var(--color-brand-2);
+}
+
+@media ( min-width: 1024px) {
+    body{
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    .nav__container{
+        padding: 20px 195px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 80px;
+    }
+
+    .section__container, .list-item__container{
+        padding: 13px 16px;
+        margin: 20px 175px;
+    }
 }
